@@ -10,8 +10,6 @@
     <style>
         body { background-color: #020617; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        
-        /* The Glow Effect for Service Boxes */
         .service-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .service-card:hover {
             border-color: #3b82f6;
@@ -19,7 +17,6 @@
             transform: translateY(-10px);
             background: rgba(59, 130, 246, 0.08);
         }
-
         .btn-glow:hover {
             box-shadow: 0 0 20px rgba(59, 130, 246, 0.7);
             transform: scale(1.05);
@@ -37,6 +34,7 @@
         </div>
     </nav>
 
+    <!-- HERO -->
     <section class="h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
         <div data-aos="zoom-in" class="mb-6 relative">
             <div class="absolute inset-0 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -47,7 +45,7 @@
             Hi, I'm <span class="text-gradient">Bhuvesh R</span>
         </h1>
         <p data-aos="fade-up" data-aos-delay="200" class="max-w-2xl text-lg text-slate-400 leading-relaxed mb-10">
-            Freelance Data Analyst specialized in transforming raw data into <span class="text-blue-400 font-semibold">Actionable Insights</span>. [cite_start]Expert in SQL, Python, and Power BI[cite: 5, 8].
+            Freelance Data Analyst specialized in transforming raw data into <span class="text-blue-400 font-semibold">Actionable Insights</span>. Expert in SQL, Python, and Power BI.
         </p>
 
         <div data-aos="fade-up" data-aos-delay="400" class="flex flex-wrap justify-center gap-4">
@@ -60,69 +58,93 @@
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <h2 class="text-3xl font-bold text-white mb-16 text-center">My Freelance Services</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            
-            <div data-aos="fade-up" class="service-card glass p-10 rounded-3xl cursor-pointer border border-white/5">
+            <div class="service-card glass p-10 rounded-3xl border border-white/5">
                 <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-blue-400 text-2xl">
                     <i class="fas fa-broom"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">Data Cleaning</h3>
-                [cite_start]<p class="text-slate-400 leading-relaxed">Preprocessing messy datasets using Python and Power Query to ensure data integrity[cite: 8, 9].</p>
+                <p class="text-slate-400 leading-relaxed">Preprocessing messy datasets using Python and Power Query to ensure data integrity.</p>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="200" class="service-card glass p-10 rounded-3xl cursor-pointer border border-white/5">
+            <div class="service-card glass p-10 rounded-3xl border border-white/5">
                 <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 text-indigo-400 text-2xl">
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">Visual Storytelling</h3>
-                [cite_start]<p class="text-slate-400 leading-relaxed">Developing interactive Power BI dashboards with complex DAX and KPI reporting[cite: 9, 15].</p>
+                <p class="text-slate-400 leading-relaxed">Developing interactive Power BI dashboards with advanced DAX and KPI reporting.</p>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="400" class="service-card glass p-10 rounded-3xl cursor-pointer border border-white/5">
+            <div class="service-card glass p-10 rounded-3xl border border-white/5">
                 <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-400 text-2xl">
                     <i class="fas fa-magnifying-glass"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">Deep Data Exploration</h3>
-                [cite_start]<p class="text-slate-400 leading-relaxed">Exploratory Data Analysis (EDA) to find hidden patterns in sales and customer trends[cite: 4, 17].</p>
+                <p class="text-slate-400 leading-relaxed">EDA to uncover hidden patterns in sales and customer behavior.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="all-projects" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">All Data Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h3 class="text-xl font-bold text-white mb-2">Demand Forecasting & Inventory Optimization</h3>
+                <p class="text-slate-400 text-sm mb-4">Final year project predicting apparel demand and optimizing stock levels using forecasting techniques.</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h3 class="text-xl font-bold text-white mb-2">BH Clothing Brand Strategy</h3>
+                <p class="text-slate-400 text-sm mb-4">Identified high-potential regions using census and Google Trends data with Power BI dashboards.</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h3 class="text-xl font-bold text-white mb-2">Zepto Sales Analysis</h3>
+                <p class="text-slate-400 text-sm mb-4">Analyzed revenue patterns and customer behavior to generate decision-making KPIs.</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h3 class="text-xl font-bold text-white mb-2">Retail Sales & Profitability</h3>
+                <p class="text-slate-400 text-sm mb-4">Studied revenue, profit margins, and customer segments through dashboards.</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h3 class="text-xl font-bold text-white mb-2">Spotify Music Trends</h3>
+                <p class="text-slate-400 text-sm mb-4">Analyzed track popularity and trends after cleaning raw streaming data.</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl border border-white/5">
+                <h3 class="text-xl font-bold text-white mb-2">Premier League Performance</h3>
+                <p class="text-slate-400 text-sm mb-4">Benchmarked team and player stats to analyze season performance.</p>
             </div>
 
         </div>
     </section>
 
-    <section id="projects" class="py-24 px-6 bg-slate-900/30">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-12">Featured Case Studies</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div data-aos="fade-right" class="glass p-8 rounded-2xl group hover:border-blue-500/30 transition">
-                    <h4 class="text-blue-500 font-bold text-sm tracking-widest uppercase mb-2">Business Intelligence</h4>
-                    <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition">BH Clothing Strategy Project</h3>
-                    [cite_start]<p class="text-slate-400 mb-6">Built an end-to-end analytics project identifying high-potential regions using population and trend data[cite: 11, 12, 13].</p>
-                    <div class="flex gap-4">
-                        <a href="https://github.com/Bhuvin7" target="_blank" class="text-white font-bold border-b-2 border-blue-500 pb-1">View on GitHub</a>
-                    </div>
-                </div>
-
-                <div data-aos="fade-left" class="glass p-8 rounded-2xl group hover:border-blue-500/30 transition">
-                    <h4 class="text-blue-500 font-bold text-sm tracking-widest uppercase mb-2">Sales Analysis</h4>
-                    <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition">Zepto Sales Analysis</h3>
-                    [cite_start]<p class="text-slate-400 mb-6">Analyzed revenue patterns and customer behavior to support business decision-making[cite: 16, 17, 18].</p>
-                    <div class="flex gap-4">
-                        <a href="https://github.com/Bhuvin7" target="_blank" class="text-white font-bold border-b-2 border-blue-500 pb-1">View Source</a>
-                    </div>
-                </div>
-            </div>
+    <!-- BIO / CONTACT -->
+    <section class="py-20 px-6 border-t border-white/5 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
+        <p class="max-w-2xl mx-auto text-slate-400 mb-6">
+            I'm Bhuvesh R, a passionate Data Analyst focused on transforming raw data into meaningful business insights through analytics, dashboards, and storytelling.
+        </p>
+        <div class="text-slate-400 space-y-2">
+            <p><strong class="text-white">Name:</strong> Bhuvesh R</p>
+            <p><strong class="text-white">Phone:</strong> +91 6382979240</p>
+            <p><strong class="text-white">Email:</strong> bhuveshsaravanan2@gmail.com</p>
         </div>
     </section>
 
-    <footer class="py-12 text-center border-t border-white/5">
-        <p class="text-slate-600 text-sm">© 2026 Bhuvesh R. Built for Business Intelligence.</p>
+    <footer class="py-8 text-center text-slate-600 text-sm border-t border-white/5">
+        © 2026 Bhuvesh R. Built for Business Intelligence.
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-    </script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+
 </body>
 </html>
