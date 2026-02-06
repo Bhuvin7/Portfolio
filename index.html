@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhuvesh R | Freelance Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #020617; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* The Glow Effect */
+        .service-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            transform: translateY(-5px);
+            background: rgba(59, 130, 246, 0.05);
+        }
+        .service-card { transition: all 0.3s ease-in-out; }
+
+        /* Smooth Button Hover */
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+        }
+    </style>
+</head>
+<body class="text-slate-300">
+
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
+        <div data-aos="zoom-in" class="mb-8">
+            <h1 class="text-6xl font-extrabold text-white mb-4 tracking-tight">
+                Data <span class="text-blue-500">Visualization</span> Expert
+            </h1>
+            <p class="text-slate-400 text-lg max-w-xl mx-auto mb-8">
+                Turning messy datasets into interactive business stories[cite: 3, 4].
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="Bhuvesh_R_Resume.pdf" download class="btn-glow flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold transition">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="#projects" class="glass hover:bg-white/10 px-8 py-3 rounded-full font-bold transition">
+                    Explore Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-center text-3xl font-bold text-white mb-12">My Freelance Services</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            
+            <div class="service-card glass p-8 rounded-2xl cursor-pointer">
+                <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-broom"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Data Cleaning</h3>
+                <p class="text-sm leading-relaxed">Preprocessing raw data using SQL and Python to ensure 100% accuracy[cite: 5, 16].</p>
+                <div class="mt-4 text-xs text-blue-400 font-mono opacity-0 group-hover:opacity-100 transition italic">Click to learn more →</div>
+            </div>
+
+            <div class="service-card glass p-8 rounded-2xl cursor-pointer border-t-2 border-transparent">
+                <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-chart-column"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">BI Visualization</h3>
+                <p class="text-sm leading-relaxed">Developing interactive dashboards in Power BI and Tableau with custom DAX[cite: 5, 9].</p>
+            </div>
+
+            <div class="service-card glass p-8 rounded-2xl cursor-pointer">
+                <div class="text-blue-500 text-3xl mb-4"><i class="fas fa-magnifying-glass-chart"></i></div>
+                <h3 class="text-xl font-bold text-white mb-2">Exploratory Analysis</h3>
+                <p class="text-sm leading-relaxed">Identifying patterns in sales and customer behavior to drive ROI[cite: 6, 10].</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-900/40 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-10">Portfolio Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="glass p-6 rounded-xl group hover:border-blue-500/50 transition">
+                    <h4 class="text-blue-400 font-bold mb-1">Business Strategy</h4>
+                    <h3 class="text-2xl text-white mb-3">BH Clothing Brand Analysis</h3>
+                    <p class="text-sm text-slate-400 mb-6">Mapped urban population trends for fashion demand targeting ages 15-39[cite: 7, 8].</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-xs font-bold text-white hover:text-blue-400 transition underline tracking-widest uppercase">Live Dashboard</a>
+                        <a href="BH_Clothing_Report.pdf" download class="text-xs font-bold text-slate-500 hover:text-white transition flex items-center gap-1">
+                            <i class="fas fa-file-pdf"></i> Download PDF Report
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-xl group hover:border-blue-500/50 transition">
+                    <h4 class="text-blue-400 font-bold mb-1">Sales Analysis</h4>
+                    <h3 class="text-2xl text-white mb-3">Zepto Customer Behavior</h3>
+                    <p class="text-sm text-slate-400 mb-6">Analyzed revenue and order patterns to optimize quick-commerce sales[cite: 10, 11].</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-xs font-bold text-white hover:text-blue-400 transition underline tracking-widest uppercase">GitHub Code</a>
+                        <a href="Zepto_Analysis.pdf" download class="text-xs font-bold text-slate-500 hover:text-white transition flex items-center gap-1">
+                            <i class="fas fa-file-pdf"></i> Download Case Study
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-600 text-sm">
+        <p>&copy; 2026 Bhuvesh R. | B.E. Computer Science and Engineering[cite: 18].</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800 });</script>
+</body>
+</html>
