@@ -1,150 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhuvesh R | Data Analyst Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { background-color: #020617; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .service-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .service-card:hover {
-            border-color: #3b82f6;
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
-            transform: translateY(-10px);
-            background: rgba(59, 130, 246, 0.08);
-        }
-        .btn-glow:hover {
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.7);
-            transform: scale(1.05);
-        }
-        .text-gradient { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhuvesh R | Data Analyst Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body { background-color:#020617; scroll-behavior:smooth; }
+.glass { background:rgba(255,255,255,0.04); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.08); }
+.btn-glow:hover { box-shadow:0 0 20px rgba(59,130,246,0.7); transform:scale(1.05); }
+.text-gradient { background:linear-gradient(to right,#38bdf8,#818cf8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+input, textarea { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); }
+input:focus, textarea:focus { outline:none; border-color:#3b82f6; }
+</style>
 </head>
+
 <body class="text-slate-300">
 
-    <nav class="fixed w-full z-50 px-6 py-4 glass flex justify-between items-center">
-        <div class="text-xl font-bold text-white tracking-tighter">BHUVESH<span class="text-blue-500">.ANALYTICS</span></div>
-        <div class="flex gap-6 items-center">
-            <a href="https://www.linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" class="hover:text-blue-400 text-xl transition"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Bhuvin7" target="_blank" class="hover:text-blue-400 text-xl transition"><i class="fab fa-github"></i></a>
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 px-6 py-4 glass flex justify-between items-center">
+    <div class="text-xl font-bold text-white">BHUVESH<span class="text-blue-500">.ANALYTICS</span></div>
+    <div class="flex gap-6 items-center">
+        <a href="https://www.linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" class="hover:text-blue-400 text-xl"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bhuvin7" target="_blank" class="hover:text-blue-400 text-xl"><i class="fab fa-github"></i></a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <img src="profile.jpg" class="w-44 h-44 rounded-full border-4 border-blue-500/30 p-1 object-cover shadow-2xl mb-6">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4">
+        Hi, I'm <span class="text-gradient">Bhuvesh R</span>
+    </h1>
+    <p class="max-w-2xl text-lg text-slate-400 mb-10">
+        Freelance Data Analyst turning raw data into <span class="text-blue-400 font-semibold">Actionable Business Insights</span> using SQL, Python & Power BI.
+    </p>
+    <a href="#contact" class="btn-glow bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded-full font-bold transition-all">
+        Hire Me
+    </a>
+</section>
+
+<!-- SERVICES -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-white mb-16 text-center">My Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass p-8 rounded-2xl">
+            <i class="fas fa-broom text-blue-400 text-3xl mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Data Cleaning</h3>
+            <p class="text-slate-400">Preparing messy datasets for accurate analysis using Python & Power Query.</p>
         </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div data-aos="zoom-in" class="mb-6 relative">
-            <div class="absolute inset-0 bg-blue-500 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-            <img src="profile.jpg" alt="Bhuvesh R" class="relative w-44 h-44 rounded-full border-4 border-blue-500/30 p-1 object-cover shadow-2xl">
+        <div class="glass p-8 rounded-2xl">
+            <i class="fas fa-chart-line text-indigo-400 text-3xl mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Dashboards & BI</h3>
+            <p class="text-slate-400">Interactive Power BI dashboards with KPIs and business storytelling.</p>
         </div>
-        
-        <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-4">
-            Hi, I'm <span class="text-gradient">Bhuvesh R</span>
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="200" class="max-w-2xl text-lg text-slate-400 leading-relaxed mb-10">
-            Freelance Data Analyst specialized in transforming raw data into <span class="text-blue-400 font-semibold">Actionable Insights</span>. Expert in SQL, Python, and Power BI.
-        </p>
-
-        <div data-aos="fade-up" data-aos-delay="400" class="flex flex-wrap justify-center gap-4">
-            <a href="Bhuvesh_R_Resume.pdf" download class="btn-glow flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded-full font-bold transition-all duration-300">
-                <i class="fas fa-download"></i> Download Resume
-            </a>
-            <a href="mailto:bhuveshsaravanan2@gmail.com" class="glass px-10 py-4 rounded-full font-bold hover:bg-white/10 transition text-white">
-                Get In Touch
-            </a>
+        <div class="glass p-8 rounded-2xl">
+            <i class="fas fa-magnifying-glass text-emerald-400 text-3xl mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Exploratory Data Analysis</h3>
+            <p class="text-slate-400">Discovering patterns, trends, and insights from complex datasets.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SERVICES -->
-    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-white mb-16 text-center">My Freelance Services</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="service-card glass p-10 rounded-3xl border border-white/5">
-                <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-blue-400 text-2xl">
-                    <i class="fas fa-broom"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-4">Data Cleaning</h3>
-                <p class="text-slate-400 leading-relaxed">Preprocessing messy datasets using Python and Power Query to ensure data integrity.</p>
-            </div>
+<!-- PROJECTS -->
+<section class="py-24 px-6 bg-slate-900/40">
+<h2 class="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+<div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-            <div class="service-card glass p-10 rounded-3xl border border-white/5">
-                <div class="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-6 text-indigo-400 text-2xl">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-4">Visual Storytelling</h3>
-                <p class="text-slate-400 leading-relaxed">Developing interactive Power BI dashboards with advanced DAX and KPI reporting.</p>
-            </div>
+<div class="glass p-6 rounded-xl border border-white/5 hover:border-blue-500 transition-all">
+<h3 class="text-white font-bold mb-2">AI Demand Forecasting & Inventory Optimization</h3>
+<p class="text-slate-400 text-sm mb-4">Built a forecasting model to predict apparel demand and optimize stock levels, reducing overstock risk.</p>
+<div class="flex gap-4">
+<a href="https://github.com/Bhuvin7" class="text-xs text-blue-400 font-bold hover:underline uppercase">Source Code</a>
+<a href="#" class="text-xs text-indigo-400 font-bold hover:underline uppercase">Live Demo</a>
+</div>
+</div>
 
-            <div class="service-card glass p-10 rounded-3xl border border-white/5">
-                <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 text-emerald-400 text-2xl">
-                    <i class="fas fa-magnifying-glass"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-4">Deep Data Exploration</h3>
-                <p class="text-slate-400 leading-relaxed">EDA to uncover hidden patterns in sales and customer behavior.</p>
-            </div>
-        </div>
-    </section>
+<div class="glass p-6 rounded-xl border border-white/5 hover:border-blue-500 transition-all">
+<h3 class="text-white font-bold mb-2">BH Clothing Market Strategy</h3>
+<p class="text-slate-400 text-sm mb-4">Identified high-potential launch regions using demographic and trend data.</p>
+<div class="flex gap-4">
+<a href="https://github.com/Bhuvin7" class="text-xs text-blue-400 font-bold hover:underline uppercase">Source Code</a>
+<a href="#" class="text-xs text-indigo-400 font-bold hover:underline uppercase">Live Dashboard</a>
+</div>
+</div>
 
-    <!-- PROJECTS -->
-    <section id="all-projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center">All Data Projects</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+<div class="glass p-6 rounded-xl border border-white/5 hover:border-blue-500 transition-all">
+<h3 class="text-white font-bold mb-2">Zepto Sales & Customer Insights</h3>
+<p class="text-slate-400 text-sm mb-4">Identified revenue-driving customer patterns and sales trends.</p>
+<div class="flex gap-4">
+<a href="https://github.com/Bhuvin7" class="text-xs text-blue-400 font-bold hover:underline uppercase">Source Code</a>
+<a href="#" class="text-xs text-indigo-400 font-bold hover:underline uppercase">Live Dashboard</a>
+</div>
+</div>
 
-            <div class="glass p-6 rounded-2xl border border-white/5">
-                <h3 class="text-xl font-bold text-white mb-2">Demand Forecasting & Inventory Optimization</h3>
-                <p class="text-slate-400 text-sm mb-4">Final year project predicting apparel demand and optimizing stock levels using forecasting techniques.</p>
-            </div>
+<div class="glass p-6 rounded-xl border border-white/5 hover:border-blue-500 transition-all">
+<h3 class="text-white font-bold mb-2">Retail Profitability Analysis</h3>
+<p class="text-slate-400 text-sm mb-4">Discovered key profit drivers and underperforming segments.</p>
+<a href="https://github.com/Bhuvin7" class="text-xs text-blue-400 font-bold hover:underline uppercase">Source Code</a>
+</div>
 
-            <div class="glass p-6 rounded-2xl border border-white/5">
-                <h3 class="text-xl font-bold text-white mb-2">BH Clothing Brand Strategy</h3>
-                <p class="text-slate-400 text-sm mb-4">Identified high-potential regions using census and Google Trends data with Power BI dashboards.</p>
-            </div>
+<div class="glass p-6 rounded-xl border border-white/5 hover:border-blue-500 transition-all">
+<h3 class="text-white font-bold mb-2">Spotify Music Trend Analysis</h3>
+<p class="text-slate-400 text-sm mb-4">Analyzed streaming trends to identify track popularity patterns.</p>
+<a href="https://github.com/Bhuvin7" class="text-xs text-blue-400 font-bold hover:underline uppercase">Source Code</a>
+</div>
 
-            <div class="glass p-6 rounded-2xl border border-white/5">
-                <h3 class="text-xl font-bold text-white mb-2">Zepto Sales Analysis</h3>
-                <p class="text-slate-400 text-sm mb-4">Analyzed revenue patterns and customer behavior to generate decision-making KPIs.</p>
-            </div>
+<div class="glass p-6 rounded-xl border border-white/5 hover:border-blue-500 transition-all">
+<h3 class="text-white font-bold mb-2">Premier League Performance Analytics</h3>
+<p class="text-slate-400 text-sm mb-4">Benchmarked teams and players using performance metrics.</p>
+<a href="https://github.com/Bhuvin7" class="text-xs text-blue-400 font-bold hover:underline uppercase">Source Code</a>
+</div>
 
-            <div class="glass p-6 rounded-2xl border border-white/5">
-                <h3 class="text-xl font-bold text-white mb-2">Retail Sales & Profitability</h3>
-                <p class="text-slate-400 text-sm mb-4">Studied revenue, profit margins, and customer segments through dashboards.</p>
-            </div>
+</div>
+</section>
 
-            <div class="glass p-6 rounded-2xl border border-white/5">
-                <h3 class="text-xl font-bold text-white mb-2">Spotify Music Trends</h3>
-                <p class="text-slate-400 text-sm mb-4">Analyzed track popularity and trends after cleaning raw streaming data.</p>
-            </div>
+<!-- ABOUT -->
+<section class="py-20 px-6 text-center">
+<h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
+<p class="max-w-2xl mx-auto text-slate-400 mb-6">
+I'm Bhuvesh R, a passionate Data Analyst focused on transforming raw data into business decisions through analytics, dashboards, and storytelling.
+</p>
+<p class="text-slate-400">📞 +91 6382979240 | 📧 bhuveshsaravanan2@gmail.com</p>
+</section>
 
-            <div class="glass p-6 rounded-2xl border border-white/5">
-                <h3 class="text-xl font-bold text-white mb-2">Premier League Performance</h3>
-                <p class="text-slate-400 text-sm mb-4">Benchmarked team and player stats to analyze season performance.</p>
-            </div>
+<!-- CONTACT FORM -->
+<section id="contact" class="py-24 px-6 border-t border-white/5">
+<h2 class="text-3xl font-bold text-white text-center mb-10">Contact Me</h2>
 
-        </div>
-    </section>
+<form action="https://formspree.io/f/mqedzjen" method="POST" class="max-w-3xl mx-auto glass p-8 rounded-2xl space-y-6">
+<input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg text-white">
+<input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg text-white">
+<textarea name="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-3 rounded-lg text-white"></textarea>
+<button type="submit" class="btn-glow bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold transition-all">
+Send Message
+</button>
+</form>
+</section>
 
-    <!-- BIO / CONTACT -->
-    <section class="py-20 px-6 border-t border-white/5 text-center">
-        <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
-        <p class="max-w-2xl mx-auto text-slate-400 mb-6">
-            I'm Bhuvesh R, a passionate Data Analyst focused on transforming raw data into meaningful business insights through analytics, dashboards, and storytelling.
-        </p>
-        <div class="text-slate-400 space-y-2">
-            <p><strong class="text-white">Name:</strong> Bhuvesh R</p>
-            <p><strong class="text-white">Phone:</strong> +91 6382979240</p>
-            <p><strong class="text-white">Email:</strong> bhuveshsaravanan2@gmail.com</p>
-        </div>
-    </section>
-
-    <footer class="py-8 text-center text-slate-600 text-sm border-t border-white/5">
-        © 2026 Bhuvesh R. Built for Business Intelligence.
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+<footer class="py-8 text-center text-slate-600 text-sm border-t border-white/5">
+© 2026 Bhuvesh R. All Rights Reserved.
+</footer>
 
 </body>
 </html>
