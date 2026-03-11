@@ -3,154 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhuvesh R | Data Analyst Portfolio</title>
+    <title>Bhuvesh R | Data Scientist & Analyst Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background-color: #020617; scroll-behavior: smooth; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        
-        /* The Glow Effect for Project & Service Cards */
-        .hover-glow { transition: all 0.4s cubic-bezier(.175,.885,.32,1.275); }
-        .hover-glow:hover { 
-            border-color: #3b82f6; 
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5); 
-            transform: translateY(-10px); 
-            background: rgba(59, 130, 246, 0.08); 
-        }
-
-        .btn-glow:hover { box-shadow: 0 0 20px rgba(59, 130, 246, 0.7); transform: scale(1.05); }
-        .text-gradient { background: linear-gradient(to right,#38bdf8,#818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .service-card { transition: all 0.4s cubic-bezier(.175,.885,.32,1.275); height: 100%; display: flex; flex-direction: column; }
+        .service-card:hover { border-color:#3b82f6; box-shadow:0 0 30px rgba(59,130,246,.5); transform:translateY(-10px); background:rgba(59,130,246,.08); }
+        .btn-glow:hover { box-shadow:0 0 20px rgba(59,130,246,.7); transform:scale(1.05); }
+        .text-gradient { background:linear-gradient(to right,#38bdf8,#818cf8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .skill-tag { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); padding: 4px 12px; border-radius: 9999px; font-size: 0.8rem; color: #60a5fa; }
+        .profile-frame { position: relative; width: 14rem; height: 18rem; }
+        .profile-frame::before { content: ''; position: absolute; inset: -8px; background: linear-gradient(45deg, #3b82f6, #818cf8); border-radius: 1.5rem; opacity: 0.3; filter: blur(15px); }
     </style>
 </head>
 
 <body class="text-slate-300">
 
+<!-- NAVBAR -->
 <nav class="fixed w-full z-50 px-6 py-4 glass flex justify-between items-center">
-    <div class="text-xl font-bold text-white tracking-tighter">BHUVESH<span class="text-blue-500">.ANALYTICS</span></div>
+    <div class="text-xl font-bold text-white tracking-wider">BHUVESH<span class="text-blue-500">.DATA</span></div>
     <div class="flex gap-6 items-center">
-        <a href="https://www.linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" class="hover:text-blue-400 text-xl transition-colors"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Bhuvin7" target="_blank" class="hover:text-blue-400 text-xl transition-colors"><i class="fab fa-github"></i></a>
+        <a href="#projects" class="hidden md:block hover:text-blue-400">Projects</a>
+        <a href="#contact" class="hidden md:block hover:text-blue-400">Contact</a>
+        <a href="https://www.linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" class="hover:text-blue-400 text-xl"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bhuvin7" target="_blank" class="hover:text-blue-400 text-xl"><i class="fab fa-github"></i></a>
     </div>
 </nav>
 
-<section class="h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-    <div data-aos="zoom-in">
-        <img src="profile.jpg" class="w-44 h-44 rounded-full border-4 border-blue-500/30 p-1 object-cover shadow-2xl mb-6 mx-auto">
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-12">
+    <div class="profile-frame mb-10" data-aos="zoom-in">
+        <img src="WhatsApp Image 2026-03-11 at 7.11.40 PM.jpeg" alt="Bhuvesh R" class="relative w-full h-full rounded-2xl border-2 border-white/10 object-cover shadow-2xl">
     </div>
-    <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
-        Hi, I'm <span class="text-gradient">Bhuvesh R</span>
-    </h1>
-    <p data-aos="fade-up" data-aos-delay="200" class="max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed">
-        Freelance Data Analyst turning raw data into <span class="text-blue-400 font-semibold">Actionable Business Insights</span> using SQL, Python, and Power BI.
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4" data-aos="fade-up">Hi, I'm <span class="text-gradient">Bhuvesh R</span></h1>
+    <p class="max-w-3xl text-lg md:text-xl text-slate-400 mb-10 leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+        Computer Science Engineer & Data Science Intern turning raw data into <span class="text-blue-400 font-semibold">Actionable Intelligence</span>. 
+        Specialized in Sales Analysis, Real-time Workflows, and Machine Learning.
     </p>
-    <div data-aos="fade-up" data-aos-delay="400" class="flex flex-wrap justify-center gap-4">
-        <a href="Bhuvesh_R_Resume.pdf" download class="btn-glow bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg shadow-blue-500/20">Download Resume</a>
-        <a href="#contact" class="glass px-10 py-4 rounded-full font-bold hover:bg-white/10 text-white transition-all">Hire Me</a>
+    <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="resume_german.pdf" download class="btn-glow bg-blue-600 hover:bg-blue-500 text-white px-10 py-4 rounded-xl font-bold transition-all">Download Resume</a>
+        <a href="#contact" class="glass px-10 py-4 rounded-xl font-bold hover:bg-white/10 text-white border border-white/10 transition-all">Hire Me</a>
     </div>
 </section>
 
+<!-- EXPERIENCE QUICK VIEW -->
+<section class="py-12 px-6">
+    <div class="max-w-4xl mx-auto glass p-8 rounded-3xl border-blue-500/20" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+            <div>
+                <h2 class="text-white text-2xl font-bold">Data Science Intern</h2>
+                <p class="text-blue-400">The Mind IT | Chennai (Remote)</p>
+            </div>
+            <span class="bg-blue-500/10 text-blue-400 px-4 py-1 rounded-full text-sm font-medium border border-blue-500/20">June 2025 — July 2025</span>
+        </div>
+        <ul class="space-y-3 text-slate-400">
+            <li class="flex gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Engineered real-time data workflows using industry-standard preprocessing.</li>
+            <li class="flex gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Performed rigorous data cleaning on 75,000+ records to improve data integrity.</li>
+            <li class="flex gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Applied ML foundations to identify trends and facilitate strategic decisions.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- TECHNICAL EXPERTISE -->
 <section class="py-24 px-6 max-w-7xl mx-auto">
     <h2 class="text-3xl font-bold text-white mb-16 text-center">Technical Expertise</h2>
     <div class="grid md:grid-cols-3 gap-8">
-        <div data-aos="fade-up" class="hover-glow glass p-10 rounded-3xl border border-white/5">
-            <i class="fas fa-broom text-blue-400 text-3xl mb-4"></i>
-            <h3 class="text-2xl font-bold text-white mb-4">Data Cleaning</h3>
-            <p class="text-slate-400">Preprocessing messy datasets using Python and Power Query to ensure data integrity and accuracy.</p>
+        <div class="service-card glass p-10 rounded-3xl" data-aos="fade-up">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400 mb-6 text-2xl"><i class="fas fa-broom"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-4">Data Engineering</h3>
+            <p class="text-slate-400 mb-6">Expert in ETL processes, SQL data cleaning, and managing real-time data pipelines.</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">SQL</span><span class="skill-tag">Python</span><span class="skill-tag">ETL</span>
+            </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200" class="hover-glow glass p-10 rounded-3xl border border-white/5">
-            <i class="fas fa-chart-pie text-indigo-400 text-3xl mb-4"></i>
-            <h3 class="text-2xl font-bold text-white mb-4">BI Dashboards</h3>
-            <p class="text-slate-400">Building interactive Power BI reports with custom DAX measures and impactful business storytelling visuals.</p>
+        <div class="service-card glass p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center text-indigo-400 mb-6 text-2xl"><i class="fas fa-chart-line"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-4">Sales Analytics</h3>
+            <p class="text-slate-400 mb-6">Uncovering revenue patterns and market trends using Power BI and advanced visualization.</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">Power BI</span><span class="skill-tag">KPI Tracking</span><span class="skill-tag">Excel</span>
+            </div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="400" class="hover-glow glass p-10 rounded-3xl border border-white/5">
-            <i class="fas fa-magnifying-glass-chart text-emerald-400 text-3xl mb-4"></i>
-            <h3 class="text-2xl font-bold text-white mb-4">Advanced EDA</h3>
-            <p class="text-slate-400">Uncovering hidden patterns, seasonal trends, and growth insights in complex sales and customer data.</p>
+        <div class="service-card glass p-10 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center text-purple-400 mb-6 text-2xl"><i class="fas fa-brain"></i></div>
+            <h3 class="text-2xl font-bold text-white mb-4">Machine Learning</h3>
+            <p class="text-slate-400 mb-6">Implementing predictive models for demand forecasting and inventory optimization.</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">Scikit-Learn</span><span class="skill-tag">EDA</span><span class="skill-tag">Streamlit</span>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="py-24 px-6 bg-slate-900/30">
+<!-- PROJECTS -->
+<section id="projects" class="py-24 px-6 bg-slate-900/30">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center">Featured Analytics Projects</h2>
+        <h2 class="text-3xl font-bold text-white mb-12 text-center">Engineering Portfolio</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <div data-aos="fade-up" class="hover-glow glass p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <i class="fas fa-warehouse text-blue-500 text-2xl"></i>
-                        <span class="text-[10px] bg-blue-500/20 text-blue-400 px-2 py-1 rounded uppercase font-bold tracking-widest">Final Year Project</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">AI Demand Forecasting & Optimization</h3>
-                    <p class="text-slate-400 text-sm mb-6">Built a machine learning system to forecast product demand and optimize inventory levels, reducing overstock and stockout risks.</p>
-                </div>
-                <div class="flex gap-4 items-center">
-                    <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 text-sm font-bold hover:underline">Code <i class="fas fa-external-link-alt ml-1"></i></a>
-                    <a href="https://inventoryproject-wvpwgh7hagexrfmbsv82vr.streamlit.app/" target="_blank" class="text-indigo-400 text-sm font-bold hover:underline">Live Demo <i class="fas fa-play ml-1"></i></a>
+            <!-- AI Demand Forecasting -->
+            <div class="service-card glass p-8 rounded-2xl" data-aos="fade-up">
+                <div class="text-blue-400 mb-4 text-2xl"><i class="fas fa-robot"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">AI Demand Forecasting</h3>
+                <p class="text-slate-400 mb-6 text-sm">Predicting stock levels using ML to reduce shortages and overstock.</p>
+                <div class="mt-auto flex gap-4">
+                    <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Code</a>
+                    <a href="https://inventoryproject-wvpwgh7hagexrfmbsv82vr.streamlit.app/" target="_blank" class="text-indigo-400 font-bold text-sm hover:underline">Demo</a>
                 </div>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="100" class="hover-glow glass p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <i class="fab fa-spotify text-green-500 text-2xl mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-4">Spotify Music Data Analysis</h3>
-                    <p class="text-slate-400 text-sm mb-6">Analyzed track data to uncover trends in popularity, genres, and artist performance using Python and data visualization.</p>
+            <!-- ZARA & H&M -->
+            <div class="service-card glass p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-pink-400 mb-4 text-2xl"><i class="fas fa-shopping-bag"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">Zara vs H&M Analysis</h3>
+                <p class="text-slate-400 mb-6 text-sm">Comparative market analysis of fashion retail giants using global sales data.</p>
+                <div class="mt-auto">
+                    <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Source Code</a>
                 </div>
-                <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 text-sm font-bold hover:underline">Source Code <i class="fas fa-code ml-1"></i></a>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="200" class="hover-glow glass p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <i class="fas fa-futbol text-purple-500 text-2xl mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-4">Premier League Performance</h3>
-                    <p class="text-slate-400 text-sm mb-6">Explored team and player metrics to identify scoring patterns, win trends, and KPIs using advanced data analytics.</p>
+            <!-- BH Clothing -->
+            <div class="service-card glass p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-orange-400 mb-4 text-2xl"><i class="fas fa-map-marked-alt"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">Clothing Market Strategy</h3>
+                <p class="text-slate-400 mb-6 text-sm">Targeted Indian market entry by cleaning 75,000+ Census records.</p>
+                <div class="mt-auto">
+                    <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Source Code</a>
                 </div>
-                <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 text-sm font-bold hover:underline">Source Code <i class="fas fa-code ml-1"></i></a>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="300" class="hover-glow glass p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <i class="fas fa-shirt text-orange-400 text-2xl mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-4">BH Clothing Market Strategy</h3>
-                    <p class="text-slate-400 text-sm mb-6">Identified high-potential sales regions using demographic and trend data to support business expansion strategy.</p>
+            <!-- Spotify -->
+            <div class="service-card glass p-8 rounded-2xl" data-aos="fade-up">
+                <div class="text-green-500 mb-4 text-2xl"><i class="fab fa-spotify"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">Spotify Trends EDA</h3>
+                <p class="text-slate-400 mb-6 text-sm">Uncovering listener behavior and genre dominance through data visualization.</p>
+                <div class="mt-auto">
+                    <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Source Code</a>
                 </div>
-                <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 text-sm font-bold hover:underline">Source Code <i class="fas fa-code ml-1"></i></a>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="400" class="hover-glow glass p-8 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <i class="fas fa-rocket text-red-500 text-2xl mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-4">Zepto Startup Growth Analysis</h3>
-                    <p class="text-slate-400 text-sm mb-6">Analyzed revenue patterns and customer behavior to support strategic decision-making for quick-commerce growth.</p>
+            <!-- Zepto -->
+            <div class="service-card glass p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-purple-400 mb-4 text-2xl"><i class="fas fa-shipping-fast"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">Zepto Revenue Analysis</h3>
+                <p class="text-slate-400 mb-6 text-sm">Quick-commerce pattern recognition and delivery performance reporting.</p>
+                <div class="mt-auto">
+                    <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Source Code</a>
                 </div>
-                <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 text-sm font-bold hover:underline">Source Code <i class="fas fa-code ml-1"></i></a>
             </div>
 
+            <!-- Premier League -->
+            <div class="service-card glass p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-yellow-500 mb-4 text-2xl"><i class="fas fa-trophy"></i></div>
+                <h3 class="text-xl font-bold text-white mb-3">Premier League Analytics</h3>
+                <p class="text-slate-400 mb-6 text-sm">Statistical breakdown of team performance and seasonal sports trends.</p>
+                <div class="mt-auto">
+                    <a href="https://github.com/Bhuvin7" target="_blank" class="text-blue-400 font-bold text-sm hover:underline">Source Code</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- CONTACT FORM -->
 <section id="contact" class="py-24 px-6 border-t border-white/5">
-    <h2 class="text-3xl font-bold text-white text-center mb-10">Start a Project</h2>
-    <form action="https://formspree.io/f/mqedzjen" method="POST" class="max-w-3xl mx-auto glass p-8 rounded-3xl space-y-6">
-        <div class="grid md:grid-cols-2 gap-6">
-            <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl text-white bg-slate-900/50 border border-white/10 focus:border-blue-500 transition-all outline-none">
-            <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-xl text-white bg-slate-900/50 border border-white/10 focus:border-blue-500 transition-all outline-none">
-        </div>
-        <textarea name="message" rows="5" placeholder="Tell me about your data needs..." required class="w-full px-4 py-3 rounded-xl text-white bg-slate-900/50 border border-white/10 focus:border-blue-500 transition-all outline-none"></textarea>
-        <button type="submit" class="btn-glow w-full bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-xl font-bold transition-all text-lg shadow-lg shadow-blue-500/20">Send Message</button>
-    </form>
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-10" data-aos="fade-up">Let's Discuss Data</h2>
+        <form action="https://formspree.io/f/mqedzjen" method="POST" class="glass p-8 rounded-3xl space-y-6" data-aos="fade-up">
+            <div class="grid md:grid-cols-2 gap-6">
+                <input type="text" name="name" placeholder="Name" required class="w-full px-4 py-4 rounded-xl text-white bg-slate-800/50 border border-white/10 focus:border-blue-500 outline-none">
+                <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-4 rounded-xl text-white bg-slate-800/50 border border-white/10 focus:border-blue-500 outline-none">
+            </div>
+            <textarea name="message" rows="5" placeholder="Project details or collaboration inquiry..." required class="w-full px-4 py-4 rounded-xl text-white bg-slate-800/50 border border-white/10 focus:border-blue-500 outline-none"></textarea>
+            <button type="submit" class="btn-glow w-full bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold transition-all">Send Message</button>
+        </form>
+    </div>
 </section>
 
-<footer class="py-12 text-center border-t border-white/5">
-    <p class="text-slate-400 font-medium mb-2">Bhuvesh R | B.E. Computer Science & Engineering</p>
-    <div class="flex justify-center gap-6 text-slate-500 text-sm mb-6">
-        <span><i class="fas fa-phone mr-1"></i> 6382979240</span>
-        <span><i class="fas fa-envelope mr-1"></i> bhuveshsaravanan2@gmail.com</span>
+<!-- FOOTER -->
+<footer class="py-12 text-center border-t border-white/5 bg-slate-950">
+    <div class="mb-6 flex justify-center gap-6">
+        <a href="https://www.linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" class="text-slate-400 hover:text-blue-500 text-xl"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bhuvin7" target="_blank" class="text-slate-400 hover:text-white text-xl"><i class="fab fa-github"></i></a>
+        <a href="mailto:bhuveshsaravanan2@gmail.com" class="text-slate-400 hover:text-blue-400 text-xl"><i class="fas fa-envelope"></i></a>
     </div>
-    <p class="text-slate-600 text-[10px] uppercase tracking-[0.2em]">© 2026 Bhuvesh R. Data Intelligence Portfolio.</p>
+    <p class="text-slate-400 font-medium">Bhuvesh R | Computer Science Engineer</p>
+    <p class="text-slate-500 text-sm mt-2">6382979240 | Thiruvarur, Tamil Nadu, India</p>
+    <p class="text-slate-600 text-xs mt-6">© 2026 Bhuvesh R. Professional Portfolio.</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
