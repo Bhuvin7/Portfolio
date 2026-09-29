@@ -2,326 +2,331 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhuvesh R — Data Analyst Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhuvesh R | Data & Business Analyst</title>
+<meta name="description" content="Data and business analyst who owned finance reporting end to end at WROGN: 4 production Power BI dashboards, 65 branches, 14 states.">
+<meta property="og:title" content="Bhuvesh R | Data & Business Analyst">
+<meta property="og:description" content="Finance reporting, Power BI, SQL and Python. Sole analyst for a finance team at WROGN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050810;--surface:#0d1117;--border:rgba(255,255,255,0.07);--blue:#3b82f6;--cyan:#22d3ee;--purple:#a78bfa;--orange:#f97316;--text:#e2e8f0;--muted:#64748b;--card:rgba(255,255,255,0.03)}
+:root{
+  --paper:#f2f5f8; --white:#fff; --ink:#14212b; --soft:#4b5b69; --line:#d5dde5;
+  --cobalt:#2447d6; --cobalt-d:#1a35a8; --amber:#f0b429; --mint:#e4eefb;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Instrument Sans',system-ui,sans-serif;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.4}
-body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(59,130,246,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;background:rgba(5,8,16,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:'Space Mono',monospace;font-size:1rem;color:white;letter-spacing:0.1em}
-.nav-logo span{color:var(--blue)}
-.nav-links{display:flex;gap:2.5rem;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
-.nav-links a:hover{color:var(--cyan)}
-.nav-icons{display:flex;gap:1rem}
-.nav-icons a{color:var(--muted);font-size:1.1rem;transition:color 0.2s}
-.nav-icons a:hover{color:white}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;z-index:1}
-.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:-1}
-.orb-1{width:400px;height:400px;background:rgba(59,130,246,0.12);top:10%;left:10%}
-.orb-2{width:300px;height:300px;background:rgba(167,139,250,0.08);bottom:20%;right:10%}
-.hero-badge{font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.2em;color:var(--cyan);text-transform:uppercase;padding:0.4rem 1rem;border:1px solid rgba(34,211,238,0.3);border-radius:100px;margin-bottom:2rem;display:inline-block}
-.hero h1{font-size:clamp(3rem,8vw,6rem);font-weight:800;line-height:1.05;color:white;margin-bottom:1.5rem}
-.hero h1 .gradient{background:linear-gradient(135deg,var(--blue),var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:1.1rem;color:var(--muted);max-width:550px;line-height:1.7;margin-bottom:3rem}
-.hero-sub strong{color:var(--text)}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
-.btn-primary{background:var(--blue);color:white;padding:0.85rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;transition:all 0.2s;display:flex;align-items:center;gap:0.5rem}
-.btn-primary:hover{background:#2563eb;transform:translateY(-2px);box-shadow:0 8px 30px rgba(59,130,246,0.4)}
-.btn-ghost{background:transparent;color:var(--text);padding:0.85rem 2rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.9rem;border:1px solid var(--border);transition:all 0.2s}
-.btn-ghost:hover{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05)}
-.stats-bar{display:flex;justify-content:center;gap:4rem;padding:2.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);position:relative;z-index:1}
-.stat{text-align:center}
-.stat-num{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;color:var(--cyan)}
-.stat-label{font-size:0.78rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.3rem}
-section{position:relative;z-index:1}
-.section-wrap{max-width:1200px;margin:0 auto;padding:6rem 2rem}
-.section-tag{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.2em;color:var(--blue);text-transform:uppercase;margin-bottom:0.75rem}
-.section-title{font-size:2.2rem;font-weight:800;color:white;margin-bottom:3rem}
-.featured-project{background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(167,139,250,0.05));border:1px solid rgba(59,130,246,0.3);border-radius:20px;padding:2.5rem;margin-bottom:2rem;position:relative;overflow:hidden;transition:all 0.3s}
-.featured-project:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(59,130,246,0.15)}
-.featured-badge{position:absolute;top:1rem;right:1rem;font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;color:var(--cyan);background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.3);padding:0.3rem 0.7rem;border-radius:100px}
-.featured-kpis{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1.2rem 0}
-.kpi-badge{font-family:'Space Mono',monospace;font-size:0.68rem;padding:0.35rem 0.7rem;border-radius:6px;background:rgba(34,211,238,0.08);border:1px solid rgba(34,211,238,0.2);color:var(--cyan)}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
-.project-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.3s;display:flex;flex-direction:column;gap:1rem}
-.project-card:hover{border-color:rgba(59,130,246,0.4);background:rgba(59,130,246,0.05);transform:translateY(-6px);box-shadow:0 20px 60px rgba(59,130,246,0.15)}
-.project-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-.project-title{font-size:1rem;font-weight:700;color:white}
-.project-desc{font-size:0.85rem;color:var(--muted);line-height:1.6;flex:1}
-.project-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
-.tag{font-family:'Space Mono',monospace;font-size:0.65rem;padding:0.25rem 0.6rem;border-radius:4px;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--muted)}
-.project-links{display:flex;gap:1rem;margin-top:0.5rem}
-.project-links a{font-size:0.8rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.4rem;transition:color 0.2s}
-.link-code{color:var(--blue)}
-.link-demo{color:var(--cyan)}
-.link-code:hover{color:#60a5fa}
-.link-demo:hover{color:#67e8f9}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
-.skill-group{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem}
-.skill-group-title{font-size:0.7rem;font-family:'Space Mono',monospace;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.5rem}
-.skill-pills{display:flex;flex-wrap:wrap;gap:0.5rem}
-.skill-pill{font-size:0.8rem;padding:0.35rem 0.8rem;border-radius:6px;background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--text);transition:all 0.2s}
-.skill-pill:hover{background:rgba(59,130,246,0.1);border-color:rgba(59,130,246,0.4);color:var(--cyan)}
-.exp-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;border-left:3px solid var(--blue)}
-.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
-.exp-title{font-size:1.3rem;font-weight:700;color:white}
-.exp-company{color:var(--blue);font-size:0.9rem;margin-top:0.3rem}
-.exp-date{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--muted);background:rgba(255,255,255,0.04);padding:0.4rem 0.8rem;border-radius:6px;border:1px solid var(--border)}
-.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.75rem}
-.exp-bullets li{display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted);line-height:1.6}
-.exp-bullets li::before{content:'▸';color:var(--blue);flex-shrink:0;margin-top:0.1rem}
-.contact-section{background:var(--surface);border-top:1px solid var(--border)}
-.contact-wrap{max-width:700px;margin:0 auto;padding:6rem 2rem;text-align:center}
-.contact-title{font-size:2.5rem;font-weight:800;color:white;margin-bottom:1rem}
-.contact-sub{color:var(--muted);margin-bottom:3rem;font-size:1rem;line-height:1.7}
-.contact-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}
-.contact-link{display:flex;align-items:center;gap:0.6rem;padding:0.85rem 1.5rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:0.85rem;font-weight:600;transition:all 0.2s;background:var(--card)}
-.contact-link:hover{border-color:var(--blue);color:var(--cyan);background:rgba(59,130,246,0.08);transform:translateY(-2px)}
-footer{text-align:center;padding:2rem;color:var(--muted);font-family:'Space Mono',monospace;font-size:0.72rem;border-top:1px solid var(--border)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.fade-up{animation:fadeUp 0.7s ease forwards}
-.delay-1{animation-delay:0.1s;opacity:0}
-.delay-2{animation-delay:0.2s;opacity:0}
-.delay-3{animation-delay:0.3s;opacity:0}
-.delay-4{animation-delay:0.4s;opacity:0}
-@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.stats-bar{gap:2rem;flex-wrap:wrap}.hero h1{font-size:2.8rem}}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;margin-bottom:.6rem}
+.lede{color:var(--soft);max-width:60ch;margin-bottom:2.5rem}
+section{padding:5rem 0}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(242,245,248,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{font:800 1.1rem var(--display);text-decoration:none}
+nav{display:flex;gap:1.6rem}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--soft)}
+nav a:hover{color:var(--cobalt)}
+
+/* hero */
+.hero{padding:4rem 0 5rem}
+.hero .wrap{display:grid;grid-template-columns:1.55fr 1fr;gap:3.5rem;align-items:center}
+.status{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.92rem;background:var(--white);border:1px solid var(--line);padding:.4rem .9rem;border-radius:99px;margin-bottom:1.5rem}
+.status i{width:9px;height:9px;border-radius:50%;background:#1f9d55;display:block}
+h1{font-size:clamp(2.6rem,6.2vw,4.6rem);font-weight:800;margin-bottom:1.3rem}
+h1 mark{background:linear-gradient(transparent 62%,var(--amber) 62%);color:inherit}
+.hero p.intro{font-size:1.2rem;color:var(--soft);max-width:54ch;margin-bottom:2rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .15s,background .15s}
+.btn.main{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.btn.main:hover{background:var(--cobalt-d);border-color:var(--cobalt-d)}
+.btn.alt:hover{background:var(--ink);color:#fff}
+.btn:active{transform:translateY(1px)}
+.portrait{justify-self:end;position:relative}
+.portrait img{width:100%;max-width:290px;aspect-ratio:4/5;object-fit:cover;border-radius:14px;display:block;box-shadow:12px 12px 0 var(--mint);border:1px solid var(--line)}
+.load{animation:rise .7s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* pipeline strip: the memorable element */
+.pipe{margin-top:3.5rem;background:var(--ink);color:#fff;border-radius:16px;padding:1.6rem 1.8rem}
+.pipe h2{font-size:1rem;font-weight:600;color:#aebccb;margin-bottom:1rem;letter-spacing:0;font-family:var(--body)}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem}
+.node{border:1.5px solid #3b4d5d;border-radius:10px;padding:.55rem 1rem;font-weight:600;font-size:.95rem}
+.node.hot{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.arrow{width:34px;height:2px;background:#3b4d5d;position:relative;overflow:hidden}
+.arrow::after{content:'';position:absolute;inset:0;width:12px;background:var(--amber);animation:run 1.8s linear infinite}
+@keyframes run{from{transform:translateX(-14px)}to{transform:translateX(36px)}}
+.pipe small{display:block;margin-top:1rem;color:#aebccb;font-size:.9rem}
+
+/* numbers */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:2.5rem}
+.fact{background:var(--white);padding:1.4rem}
+.fact b{display:block;font:800 2.1rem var(--display);color:var(--cobalt)}
+.fact span{font-size:.92rem;color:var(--soft)}
+
+/* work */
+.work{background:var(--white);border-block:1px solid var(--line)}
+.role{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline;margin-bottom:2rem}
+.role h3{font-size:1.5rem;font-weight:700}
+.role span{color:var(--soft);font-weight:500}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.case{border-top:4px solid var(--cobalt);padding-top:1rem}
+.case h3{font-size:1.15rem;margin-bottom:.5rem}
+.case p{color:var(--soft);font-size:1rem}
+.dash{margin-top:2.5rem;display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.dash div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.9rem 1.1rem;font-weight:500}
+.dash b{display:block;font-family:var(--display)}
+.dash span{font-size:.92rem;color:var(--soft);font-weight:400}
+.note{margin-top:1.5rem;font-size:.92rem;color:var(--soft);max-width:70ch}
+
+/* projects */
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:2rem;margin-bottom:1.4rem}
+.feature h3{font-size:1.5rem;margin-bottom:.4rem}
+.feature p{color:var(--soft);margin-bottom:1rem}
+.feature ul{list-style:none;display:grid;gap:.5rem}
+.feature li{padding-left:1.4rem;position:relative;font-size:1rem}
+.feature li::before{content:'';position:absolute;left:0;top:.6em;width:8px;height:8px;background:var(--amber);border-radius:2px}
+.tag{display:inline-block;font-size:.8rem;font-weight:600;background:var(--mint);color:var(--cobalt-d);padding:.15rem .6rem;border-radius:6px;margin:0 .3rem .4rem 0}
+.links{margin-top:1rem;display:flex;gap:1.2rem;font-weight:600}
+.links a{color:var(--cobalt)}
+.links a:hover{text-decoration:none}
+.more{display:grid;grid-template-columns:repeat(2,1fr);gap:0 2.5rem;margin-top:2.5rem}
+.more div{padding:1.1rem 0;border-top:1px solid var(--line)}
+.more h3{font-size:1.05rem;margin-bottom:.2rem}
+.more p{color:var(--soft);font-size:.98rem}
+.more h4{font:600 .82rem var(--body);color:var(--cobalt-d);margin-top:.3rem}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:0 3rem}
+.skills div{padding:1.2rem 0;border-top:1px solid var(--line)}
+.skills h3{font-size:1.05rem;margin-bottom:.4rem}
+.skills p{color:var(--soft)}
+.skills em{font-style:normal;font-weight:600;color:var(--ink)}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact h2{color:#fff}
+.contact .lede{color:#b4c2cf}
+.contact .btn{border-color:#fff}
+.contact .btn.alt:hover{background:#fff;color:var(--ink)}
+.contact .btn.main{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.contact .btn.main:hover{background:#ffcb4d;border-color:#ffcb4d}
+footer{padding:1.5rem 0;text-align:center;color:var(--soft);font-size:.9rem}
+
+@media(max-width:820px){
+  nav{display:none}
+  .hero .wrap,.feature{grid-template-columns:1fr}
+  .portrait{order:-1;justify-self:start}
+  .portrait img{max-width:200px}
+  .cases,.skills,.more,.dash{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  section{padding:3.5rem 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .load{animation:none}.arrow::after{animation:none;width:100%}html{scroll-behavior:auto}
+}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-logo">BHUVESH<span>.DATA</span></div>
-  <div class="nav-links">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Bhuvesh R</a>
+    <nav aria-label="Main">
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-  <div class="nav-icons">
-    <a href="https://linkedin.com/in/bhuvesh-r-0a8151229" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/Bhuvin7" target="_blank"><i class="fab fa-github"></i></a>
-  </div>
-</nav>
-<section class="hero">
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <img src="profile.jpg"
-     alt="Bhuvesh R"
-     class="fade-up"
-     style="width:160px;height:200px;object-fit:cover;
-     border-radius:12px;
-     border:3px solid rgba(59,130,246,0.4);
-     box-shadow:0 10px 40px rgba(0,0,0,0.4);
-     margin-bottom:20px;
-     transition:0.3s;"
-     onmouseover="this.style.transform='scale(1.05)'"
-     onmouseout="this.style.transform='scale(1)'">
-  <div class="hero-badge fade-up">Available for Data Analyst & Business Analyst roles</div>
-  <h1 class="fade-up delay-1">Hi, I'm<br><span class="gradient">Bhuvesh R</span></h1>
-  <p class="hero-sub fade-up delay-2">Final-year <strong>Computer Science Engineer</strong> specializing in <strong>Fashion Retail Analytics, Business Intelligence</strong> and <strong>Predictive Modeling</strong>. I turn raw data into decisions.</p>
-  <div class="hero-btns fade-up delay-3">
-    <a href="resume.pdf" target="_blank" class="btn-primary"><i class="fas fa-file-alt"></i> View Resume</a>
-    <a href="https://inventoryproject-wvpwgh7hagexrfmbsv82vr.streamlit.app/" target="_blank" class="btn-primary" style="background:#0891b2;"><i class="fas fa-rocket"></i> Live Project</a>
-    <a href="mailto:bhuveshsaravanan2@gmail.com" class="btn-ghost">Email Me</a>
-  </div>
-</section>
+</header>
 
-<div class="stats-bar fade-up delay-4">
-  <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Projects Built</div></div>
-  <div class="stat"><div class="stat-num">75K+</div><div class="stat-label">Records Processed</div></div>
-  <div class="stat"><div class="stat-num">35+</div><div class="stat-label">DAX Measures</div></div>
-  <div class="stat"><div class="stat-num">17.75</div><div class="stat-label">RMSE Achieved</div></div>
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="load">
+      <div class="status"><i></i> Open to data and business analyst roles, remote or relocation</div>
+      <h1>I make finance data <mark>trustworthy</mark>.</h1>
+      <p class="intro">I'm Bhuvesh, a computer science graduate. As the only data analyst in a finance team at WROGN, I gathered the requirements, fixed the data, built the dashboards and explained the results to non-technical stakeholders.</p>
+      <div class="btns">
+        <a class="btn main" href="resume.pdf" target="_blank" rel="noopener">View resume</a>
+        <a class="btn alt" href="mailto:bhuveshsaravanan2@gmail.com">Email me</a>
+        <a class="btn alt" href="https://linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="portrait load" style="animation-delay:.15s">
+      <img src="profile.jpg" alt="Portrait of Bhuvesh R">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="pipe load" style="animation-delay:.3s">
+      <h2>The reporting pipeline I documented and maintained at WROGN</h2>
+      <div class="flow" role="img" aria-label="Data flows from FTP to OneDrive to Power BI to finance decisions">
+        <span class="node">FTP</span><span class="arrow"></span>
+        <span class="node">OneDrive</span><span class="arrow"></span>
+        <span class="node">Power BI</span><span class="arrow"></span>
+        <span class="node hot">Finance decisions</span>
+      </div>
+      <small>Before: static offline Excel files. After: live Google Sheets source and a documented, refreshable flow.</small>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>4</b><span>production Power BI dashboards</span></div>
+      <div class="fact"><b>65</b><span>branches across 14 states tracked</span></div>
+      <div class="fact"><b>35+</b><span>DAX measures written</span></div>
+      <div class="fact"><b>17.75</b><span>RMSE on my demand forecast model</span></div>
+    </div>
+  </div>
 </div>
 
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="lede">A real finance team, real deadlines, and nobody else to hand the problem to.</p>
+
+    <div class="role">
+      <h3>Data Analyst Intern, WROGN (Universal Sportsbiz Pvt. Ltd.)</h3>
+      <span>Bengaluru, India &middot; Finance department &middot; 2026</span>
+    </div>
+
+    <div class="cases">
+      <div class="case">
+        <h3>Owned the requests</h3>
+        <p>I was the single point of contact for finance reporting. I ran requirement conversations with non-technical stakeholders, scoped each fix and reported back on the outcome, while balancing competing priorities to keep delivery on schedule.</p>
+      </div>
+      <div class="case">
+        <h3>Traced numbers to their cause</h3>
+        <p>When SOH and Sales tables disagreed, I ran root-cause analysis, then rebuilt the table relationships and data model so the reports reconciled. I used Python to test assumptions before anything reached stakeholders.</p>
+      </div>
+      <div class="case">
+        <h3>Made the process visible</h3>
+        <p>I moved reporting from static Excel files to a live Google Sheets source and documented the FTP, OneDrive and Power BI flow, so the next person can understand and maintain it.</p>
+      </div>
+    </div>
+
+    <div class="dash">
+      <div><b>GST validation</b><span>Checks tax figures against source records</span></div>
+      <div><b>State-wise sales trends</b><span>Sales movement across states</span></div>
+      <div><b>Salesman performance</b><span>65 branches, 14 states</span></div>
+      <div><b>NSV and tax audit</b><span>Net sales value with tax reconciliation</span></div>
+    </div>
+    <p class="note">Company data is confidential, so no screenshots of these dashboards appear here. I'm happy to walk through the design and logic in an interview.</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
 <section id="projects">
-  <div class="section-wrap">
-    <div class="section-tag">// work</div>
-    <div class="section-title">Technical Projects</div>
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="lede">Independent projects built to practise retail and fashion analytics on datasets I chose or prepared myself.</p>
 
-    <!-- FEATURED: SOULED STORE -->
-    <div class="featured-project">
-      <span class="featured-badge">⭐ FEATURED</span>
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-        <div class="project-icon" style="background:rgba(249,115,22,0.15);color:#fb923c;font-size:1.4rem;width:52px;height:52px;"><i class="fas fa-tshirt"></i></div>
-        <div>
-          <div style="font-size:1.15rem;font-weight:700;color:white;">The Souled Store — Business Intelligence Dashboard</div>
-          <div style="font-size:0.8rem;color:var(--muted);margin-top:0.3rem;">Power BI &nbsp;•&nbsp; DAX &nbsp;•&nbsp; Data Modeling &nbsp;•&nbsp; Retail Analytics</div>
-        </div>
+    <article class="feature">
+      <div>
+        <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Data modeling</span>
+        <h3>The Souled Store: retail BI dashboard</h3>
+        <p>A 3-page dashboard on 1,500+ orders, 150 products and 1,000+ inventory SKUs for a pop culture apparel brand.</p>
+        <div class="links"><a href="https://github.com/Bhuvin7" target="_blank" rel="noopener">View on GitHub</a></div>
       </div>
-      <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">Built a 3-page interactive Power BI dashboard analyzing 1,500+ orders, 150 products and 1,000+ inventory SKUs for India's leading pop culture apparel brand. Developed 35+ DAX measures covering critical retail KPIs — Cancellation Rate, Dead Stock Value, Sell Through %, Gross Margin % and Channel-wise Revenue across D2C, Amazon and Flipkart.</p>
-      <div class="featured-kpis">
-        <span class="kpi-badge">1,500+ Orders</span>
-        <span class="kpi-badge">35+ DAX Measures</span>
-        <span class="kpi-badge">Sell Through %</span>
-        <span class="kpi-badge">Dead Stock Value</span>
-        <span class="kpi-badge">Gross Margin %</span>
-        <span class="kpi-badge">D2C + Amazon + Flipkart</span>
-        <span class="kpi-badge">3-Page Dashboard</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> View on GitHub</a>
-      </div>
-    </div>
-
-    <!-- FEATURED: BEWAKOOF -->
-    <div class="featured-project" style="background:linear-gradient(135deg,rgba(234,179,8,0.08),rgba(249,115,22,0.05));border-color:rgba(234,179,8,0.3);">
-      <span class="featured-badge" style="color:#eab308;background:rgba(234,179,8,0.1);border-color:rgba(234,179,8,0.3);">⭐ FEATURED</span>
-      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-        <div class="project-icon" style="background:rgba(234,179,8,0.15);color:#eab308;font-size:1.4rem;width:52px;height:52px;"><i class="fas fa-store"></i></div>
-        <div>
-          <div style="font-size:1.15rem;font-weight:700;color:white;">Bewakoof — Sales & Customer Analytics Dashboard</div>
-          <div style="font-size:0.8rem;color:var(--muted);margin-top:0.3rem;">Power BI &nbsp;•&nbsp; DAX &nbsp;•&nbsp; Customer Analytics &nbsp;•&nbsp; Fashion Retail</div>
-        </div>
-      </div>
-      <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;margin-bottom:1rem;">Built a 2-page Power BI dashboard analyzing 3,000+ orders across Bewakoof's D2C and marketplace channels. Uncovered key insights — Anime leads revenue at ₹0.42M, D2C dominates with ₹0.94M, 56.14% repeat customer rate indicating strong brand loyalty, and 51.93% gross margin across all product categories.</p>
-      <div class="featured-kpis">
-        <span class="kpi-badge" style="color:#eab308;border-color:rgba(234,179,8,0.3);background:rgba(234,179,8,0.08);">3,000+ Orders</span>
-        <span class="kpi-badge" style="color:#eab308;border-color:rgba(234,179,8,0.3);background:rgba(234,179,8,0.08);">₹2.64M Revenue</span>
-        <span class="kpi-badge" style="color:#eab308;border-color:rgba(234,179,8,0.3);background:rgba(234,179,8,0.08);">56.14% Repeat Customers</span>
-        <span class="kpi-badge" style="color:#eab308;border-color:rgba(234,179,8,0.3);background:rgba(234,179,8,0.08);">51.93% Gross Margin</span>
-        <span class="kpi-badge" style="color:#eab308;border-color:rgba(234,179,8,0.3);background:rgba(234,179,8,0.08);">6 Channels Analyzed</span>
-        <span class="kpi-badge" style="color:#eab308;border-color:rgba(234,179,8,0.3);background:rgba(234,179,8,0.08);">Franchise Performance</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> View on GitHub</a>
-      </div>
-    </div>
-
-    <!-- OTHER PROJECTS -->
-    <div class="projects-grid" style="margin-top:2rem;">
-
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(99,102,241,0.15);color:#818cf8;"><i class="fas fa-chart-line"></i></div>
-        <div class="project-title">AI-Driven Inventory Optimization</div>
-        <div class="project-desc">ML demand forecasting system using Random Forest achieving RMSE of 17.75. Solves overstocking and understocking in retail. Deployed live on Streamlit.</div>
-        <div class="project-tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Streamlit</span><span class="tag">Pandas</span></div>
-        <div class="project-links">
-          <a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> Code</a>
-          <a href="https://inventoryproject-wvpwgh7hagexrfmbsv82vr.streamlit.app/" target="_blank" class="link-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(249,115,22,0.15);color:#fb923c;"><i class="fas fa-map-pin"></i></div>
-        <div class="project-title">BH Market Strategy — BI Analysis</div>
-        <div class="project-desc">Processed 75,000+ Census demographic records to identify 5 high-potential apparel market regions. Built Power BI dashboards with 10+ KPIs.</div>
-        <div class="project-tags"><span class="tag">Power BI</span><span class="tag">Python</span><span class="tag">DAX</span><span class="tag">Census Data</span></div>
-        <div class="project-links"><a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> View Details</a></div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(16,185,129,0.15);color:#34d399;"><i class="fas fa-shopping-cart"></i></div>
-        <div class="project-title">Retail Sales & Profitability Analysis</div>
-        <div class="project-desc">Analyzed 50,000+ transactions in Power BI. Identified 3 underperforming segments contributing to 15% revenue leakage.</div>
-        <div class="project-tags"><span class="tag">Power BI</span><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">DAX</span></div>
-        <div class="project-links"><a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> View Details</a></div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(236,72,153,0.15);color:#f472b6;"><i class="fas fa-tag"></i></div>
-        <div class="project-title">Zara vs H&M — Pricing Analysis</div>
-        <div class="project-desc">Comparative analysis of pricing strategies and market positioning across 2 global fashion brands. Identified competitive gaps and opportunities.</div>
-        <div class="project-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Matplotlib</span><span class="tag">EDA</span></div>
-        <div class="project-links"><a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> View Details</a></div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(239,68,68,0.15);color:#f87171;"><i class="fas fa-trophy"></i></div>
-        <div class="project-title">Premier League Performance Analysis</div>
-        <div class="project-desc">Python EDA on team and player statistics across multiple seasons. Evaluated performance trends for 20 clubs.</div>
-        <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Seaborn</span><span class="tag">EDA</span></div>
-        <div class="project-links"><a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> View Details</a></div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-icon" style="background:rgba(167,139,250,0.15);color:#a78bfa;"><i class="fas fa-broom"></i></div>
-        <div class="project-title">Advanced SQL Data Cleaning</div>
-        <div class="project-desc">Production-grade SQL scripts for removing duplicates, resolving inconsistencies and enforcing data quality standards across high-volume datasets.</div>
-        <div class="project-tags"><span class="tag">SQL</span><span class="tag">Data Governance</span><span class="tag">ETL</span></div>
-        <div class="project-links"><a href="https://github.com/Bhuvin7" target="_blank" class="link-code"><i class="fab fa-github"></i> View Scripts</a></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="skills" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="section-wrap">
-    <div class="section-tag">// stack</div>
-    <div class="section-title">Technical Skills</div>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <div class="skill-group-title" style="color:#3b82f6;"><i class="fas fa-chart-bar"></i> Visualization & BI</div>
-        <div class="skill-pills"><span class="skill-pill">Power BI</span><span class="skill-pill">DAX (35+ measures)</span><span class="skill-pill">Excel Dashboards</span><span class="skill-pill">Power Query</span><span class="skill-pill">KPI Development</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title" style="color:#22d3ee;"><i class="fas fa-code"></i> Programming</div>
-        <div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">Pandas</span><span class="skill-pill">Matplotlib</span><span class="skill-pill">Seaborn</span><span class="skill-pill">NumPy</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title" style="color:#f97316;"><i class="fas fa-tshirt"></i> Retail Analytics</div>
-        <div class="skill-pills"><span class="skill-pill">Sell Through %</span><span class="skill-pill">Dead Stock Analysis</span><span class="skill-pill">Gross Margin %</span><span class="skill-pill">Channel Analytics</span><span class="skill-pill">Category Performance</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title" style="color:#34d399;"><i class="fas fa-database"></i> Data Engineering</div>
-        <div class="skill-pills"><span class="skill-pill">ETL Pipelines</span><span class="skill-pill">Data Cleaning</span><span class="skill-pill">Data Governance</span><span class="skill-pill">EDA</span><span class="skill-pill">Statistical Analysis</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title" style="color:#a78bfa;"><i class="fas fa-brain"></i> Analytics</div>
-        <div class="skill-pills"><span class="skill-pill">Hypothesis Testing</span><span class="skill-pill">Correlation Analysis</span><span class="skill-pill">Demand Forecasting</span><span class="skill-pill">A/B Testing</span></div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title" style="color:#fb923c;"><i class="fas fa-tools"></i> Tools</div>
-        <div class="skill-pills"><span class="skill-pill">Streamlit</span><span class="skill-pill">GitHub</span><span class="skill-pill">Excel (Advanced)</span><span class="skill-pill">Google Sheets</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="section-wrap">
-    <div class="section-tag">// experience</div>
-    <div class="section-title">Professional Experience</div>
-    <div class="exp-card">
-      <div class="exp-header">
-        <div>
-          <div class="exp-title">Data Science Intern</div>
-          <div class="exp-company"><i class="fas fa-building" style="font-size:0.8rem;"></i> The Mind IT &nbsp;·&nbsp; Remote</div>
-        </div>
-        <div class="exp-date">Jun 2024 — Jul 2024</div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Cleaned and preprocessed 10,000+ structured records using Python and Excel, reducing data inconsistencies by ~40%</li>
-        <li>Performed EDA to identify patterns and outliers; delivered actionable reports to business stakeholders</li>
-        <li>Automated data preparation workflows using Python, cutting manual processing time by ~30%</li>
-        <li>Applied ML preprocessing techniques including feature engineering and normalization for predictive pipelines</li>
+      <ul>
+        <li>35+ DAX measures: cancellation rate, dead stock value, sell-through %, gross margin %</li>
+        <li>Channel-wise revenue across D2C, Amazon and Flipkart</li>
+        <li>Built to answer one question: what stock is not moving, and what is it costing?</li>
       </ul>
+    </article>
+
+    <article class="feature">
+      <div>
+        <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Streamlit</span>
+        <h3>AI-driven inventory optimisation</h3>
+        <p>My final-year project. A Random Forest model forecasts retail demand and flags overstock, understock and stockout risk.</p>
+        <div class="links">
+          <a href="https://github.com/Bhuvin7" target="_blank" rel="noopener">Code</a>
+          <a href="https://inventoryproject-wvpwgh7hagexrfmbsv82vr.streamlit.app/" target="_blank" rel="noopener">Live demo</a>
+        </div>
+      </div>
+      <ul>
+        <li>RMSE of 17.75 on held-out data</li>
+        <li>Deployed as a Streamlit app you can open and try</li>
+        <li>Turns a forecast into a stocking decision, not just a number</li>
+      </ul>
+    </article>
+
+    <article class="feature">
+      <div>
+        <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Customer analytics</span>
+        <h3>Bewakoof: sales and customer dashboard</h3>
+        <p>A 2-page dashboard on 3,000+ orders across 6 D2C and marketplace channels.</p>
+        <div class="links"><a href="https://github.com/Bhuvin7" target="_blank" rel="noopener">View on GitHub</a></div>
+      </div>
+      <ul>
+        <li>₹2.64M revenue analysed by category and channel</li>
+        <li>56.14% repeat customers and 51.93% gross margin measured</li>
+        <li>Franchise performance compared side by side</li>
+      </ul>
+    </article>
+
+    <div class="more">
+      <div><h3>BH Clothing brand analysis</h3><p>Census data and Google Trends combined to find promising apparel markets.</p><h4>Power BI, Python, DAX</h4></div>
+      <div><h3>Retail sales and profitability</h3><p>Sales, margin and underperforming segments found using SQL, Excel and Power BI.</p><h4>SQL, Excel, Power BI</h4></div>
+      <div><h3>Zara vs H&amp;M pricing</h3><p>Comparison of pricing strategy and product positioning between two brands.</p><h4>Python, SQL, EDA</h4></div>
+      <div><h3>Zepto sales analysis</h3><p>Product performance and revenue patterns in quick-commerce data.</p><h4>Python, SQL, Power BI</h4></div>
+      <div><h3>Startup investment analysis</h3><p>Funding patterns by industry, investor and geography.</p><h4>Python, Pandas, Power BI</h4></div>
+      <div><h3>Premier League and Spotify EDA</h3><p>Exploratory analysis of club, player and track-level data.</p><h4>Python, Pandas, Seaborn</h4></div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact-section">
-  <div class="contact-wrap">
-    <div class="section-tag" style="display:inline-block;margin-bottom:1rem;">// contact</div>
-    <div class="contact-title">Let's Work Together</div>
-    <p class="contact-sub">Actively seeking Data Analyst and Business Analyst roles — especially in fashion retail and apparel analytics. Let's connect!</p>
-    <div class="contact-links">
-      <a href="mailto:bhuveshsaravanan2@gmail.com" class="contact-link"><i class="fas fa-envelope"></i> Email Me</a>
-      <a href="https://linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://github.com/Bhuvin7" target="_blank" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
-      <a href="tel:+916382979240" class="contact-link"><i class="fas fa-phone"></i> +91 63829 79240</a>
+<!-- SKILLS -->
+<section id="skills" style="background:var(--white);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="lede">What I use daily, and what I'm still building.</p>
+    <div class="skills">
+      <div><h3>Reporting and BI</h3><p><em>Power BI</em>, advanced DAX, Power Query, data modeling, KPI design</p></div>
+      <div><h3>Data</h3><p><em>Python</em> (Pandas, NumPy, Matplotlib, Seaborn), <em>Excel</em> (XLOOKUP, SUMIFS), Google Sheets, SQL</p></div>
+      <div><h3>Business analysis</h3><p>Requirements gathering, root-cause analysis, gap identification, as-is and to-be process documentation, stakeholder communication</p></div>
+      <div><h3>Machine learning</h3><p>Scikit-learn, Random Forest, demand forecasting, Streamlit deployment</p></div>
+      <div><h3>Delivery</h3><p>Working to deadlines, owning an issue from first report to resolution, working independently as the only analyst</p></div>
+      <div><h3>Currently learning</h3><p>Deeper SQL and applied statistics, plus Agile/Scrum and Jira fundamentals, through structured self-study</p></div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Bhuvesh R — Mannargudi, Tamil Nadu, India &nbsp;|&nbsp; Fashion Retail Analytics Specialist</footer>
+<!-- EDUCATION -->
+<section>
+  <div class="wrap">
+    <h2>Education</h2>
+    <p><strong>B.E. Computer Science</strong>, Arasu Engineering College, Kumbakonam, India. Graduated May 2026, CGPA 7.8.</p>
+  </div>
+</section>
 
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk about your data</h2>
+    <p class="lede">I'm looking for an entry-level data or business analyst role. If you have a reporting problem that needs an owner, write to me.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:bhuveshsaravanan2@gmail.com">bhuveshsaravanan2@gmail.com</a>
+      <a class="btn alt" href="tel:+916382979240">+91 63829 79240</a>
+      <a class="btn alt" href="https://linkedin.com/in/bhuvesh-r-0a8151229" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn alt" href="https://github.com/Bhuvin7" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>&copy; 2026 Bhuvesh R</footer>
 </body>
 </html>
